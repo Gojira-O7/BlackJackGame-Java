@@ -15,7 +15,6 @@ public class BlackJack {
         String typ; 
         String wert; 
 
-        //kunstruktor fuer eine karte
         Karte(String wert, String typ) { 
             this.typ = typ;
             this.wert = wert;
