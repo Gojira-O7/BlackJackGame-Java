@@ -194,12 +194,12 @@ public class BlackJack {
                 g.setFont(new Font("Arial", Font.PLAIN, 30));
                 g.setColor(Color.WHITE);
                 g.drawString("Dealer: ", 25, 358);
-                g.drawString("" + (dealerPunkte - umgedrehteKarte.getValue()), 147, 358);
+                g.drawString("" + (dealerPunkte - umgedrehteKarte.getValue()), 135, 358);
             }else {
                 g.setFont(new Font("Arial", Font.PLAIN, 30));
                 g.setColor(Color.WHITE);
                 g.drawString("Dealer: ", 25, 358);
-                g.drawString("" + dealerPunkte, 147, 358);
+                g.drawString("" + dealerPunkte, 135, 358);
             }
 
             g.setFont(new Font("Arial", Font.PLAIN, 30));
@@ -208,7 +208,7 @@ public class BlackJack {
 
             g.setFont(new Font("Arial", Font.PLAIN, 30));
             g.setColor(Color.WHITE);
-            g.drawString("Highscore: " + highscore, 847, 358);
+            g.drawString("Highscore: " + highscore, 852, 358);
 
             g.setFont(new Font("Arial", Font.PLAIN, 30));
             g.setColor(Color.WHITE);
