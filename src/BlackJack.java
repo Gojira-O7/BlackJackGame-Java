@@ -282,9 +282,7 @@ public class BlackJack {
                         teilenButton.setEnabled(false);
                         verdoppelnButton.setEnabled(false);
                     }
-        
-                    // Wechsle die Hand nach dem Ziehen einer Karte
-                    wechsleHand();
+                    wechsleHand(); //nach dem Ziehen einer Karte
                 } else {
                     // Fuege die Karte zur urspruenglichen Hand hinzu
                     spielerHand.add(karte);
