@@ -556,7 +556,7 @@ class MusikSpieler {
                 clip.start();
                 clip.loop(Clip.LOOP_CONTINUOUSLY);
 
-                float gewuenschteLautstaerke = -25.0f; //beispiel: -10 dB (leiser)
+                float gewuenschteLautstaerke = -20.0f; //beispiel: -10 dB (leiser)
                 setzeLautstaerke(clip, gewuenschteLautstaerke);
             }else {
                 System.out.println("Hintergrundmusik nicht gefunden");
