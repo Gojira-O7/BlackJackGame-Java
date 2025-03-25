@@ -263,27 +263,7 @@ public class BlackJack {
     
         karteZiehenButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                try {
-                    String basisPfad = "src/music/soundeffekt/karte_ziehen/";
-                    Random random = new Random();
-                    int index = random.nextInt(4) + 1; //zufall 1 bis 4
-    
-                    String dateiName = basisPfad + "card-place-" + index + ".wav";
-                    File musikPfad = new File(dateiName);
-        
-                    if (musikPfad.exists()){
-                        AudioInputStream audioInput = AudioSystem.getAudioInputStream(musikPfad);
-                        Clip clip = AudioSystem.getClip();
-                        clip.open(audioInput);
-                        clip.start();
-    
-                    }else {
-                        System.out.println("Karte Ziehen Musik nicht gefunden");
-                    }  
-    
-                } catch (Exception m) {
-                    System.out.println("Fehler beim Abspielen der Karte Ziehen Musik: " + m.getMessage());
-                }
+                musikSpieler.spielKarteZiehenMusik();
 
                 Karte karte = stapel.remove(stapel.size() - 1); 
             
@@ -588,7 +568,27 @@ class MusikSpieler {
     }
 
     public void spielKarteZiehenMusik() {
-            
+        try {
+            String basisPfad = "src/music/soundeffekt/karte_ziehen/";
+            Random random = new Random();
+            int index = random.nextInt(4) + 1; //zufall 1 bis 4
+
+            String dateiName = basisPfad + "card-place-" + index + ".wav";
+            File musikPfad = new File(dateiName);
+
+            if (musikPfad.exists()){
+                AudioInputStream audioInput = AudioSystem.getAudioInputStream(musikPfad);
+                Clip clip = AudioSystem.getClip();
+                clip.open(audioInput);
+                clip.start();
+
+            }else {
+                System.out.println("Karte Ziehen Musik nicht gefunden");
+            }  
+
+        } catch (Exception m) {
+            System.out.println("Fehler beim Abspielen der Karte Ziehen Musik: " + m.getMessage());
+        }
     }
         
     public void spielPassenMusik() {
